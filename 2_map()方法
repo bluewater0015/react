@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>map()</title>
+</head>
+<body>
+	<script>
+		//map()返回一个由原数组中的每个元素调用一个指定方法之后返回值组成一个新的数组；
+		//[].map(function(value,index,array){}) 
+		//value 当前正在遍历的元素
+		//index 元素索引
+		//array 原数组本身
+		var data = [1,2,3,4];
+		var arrsquer = data.map(function(item){ //当前正在遍历的元素
+			return item*item;
+		})
+		alert(arrsquer);
+	</script>
+</body>
+</html>

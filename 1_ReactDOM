@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="js/react.js"></script>
+	<script src="js/react-dom.js"></script>
+	<script src="js/browser.min.js"></script>
+</head>
+<body>
+	<div id="example"></div>
+	<div></div>
+	<script type="text/babel">
+		<!-- ReactDOM.render()方法是react最基本的方法，用于将模板转化为HTML语言，并插入到指定的DOM节点 -->
+		ReactDOM.render(
+			<h1>Hello,World!</h1>,
+			document.getElementById('example')
+		);
+		ReactDOM.render(
+			<h2>reactDOM.render()</h2>,
+			document.getElementsByTagName("div")[1]
+		);
+	</script>
+</body>
+</html>

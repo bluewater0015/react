@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>map</title>
+</head>
+<body>
+	<script>
+		var user = [
+			{name: "天下", "email": "123@qq.com"},
+			{name: "小花", "email": "456@qq.com"},
+			{name: "花儿", "email": "789@qq.com"}
+		];
+		var emails = user.map(function(user){  //当前正在遍历的元素
+			//return user;    //如果返回的是user，那么打印出来就是对象了
+			return user.email;
+		})  
+		console.log(emails);//打印出的是数组
+		console.log(emails.join(",")); //打印出来的是单个的字符串
+	</script>
+</body>
+</html>

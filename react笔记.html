@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>react笔记</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			background: #f5f5d5;
+		}
+		ul,li{
+			list-style: none;
+		}
+		#box{
+			width: 950px;
+			height: 3000px;
+			background: #f5f5d5;
+			margin: 0 auto;
+			padding: 20px;
+		}
+		.active{
+			background: #f99;
+		}
+		.bold{
+			font-weight: 900;
+		}
+		img{
+			width: 950px;
+		}
+		.color{
+			color: #d00;
+		}
+		.template{
+			padding: 20px;
+		}
+		.render{
+			padding: 20px;
+		}
+		.jsx{
+			padding: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div id="box">
+		<h1>react入门教程</h1>
+		<a href="http://www.ruanyifeng.com/blog/2015/03/react.html">看看别人是怎么学习的</a>
+		<h2>一、HTML模板</h2>
+		<div class="template">
+			<img src="img/mb.png" alt="">
+			<h3>1.上面的代码有两个地方要注意：</h3>
+			<ul>
+				<li>
+				(1)最后一个script标签的type属性为textbabel,这是因为React独有的JSX语法跟js的语法不兼容，
+				凡是使用JSX的地方都要加上<span class="active">type="text/babel"</span>。
+				</li>
+				<li>
+					(2)上面代码一共三个库
+					<ul>
+						<li>&nbsp;&nbsp;react.js---是react的核心库</li>
+						<li>&nbsp;&nbsp;react-dom.js---提供与DOM相关的功能</li>
+						<li>&nbsp;&nbsp;Browser.js---作用是将JSX语法转化为javascript语法，这一步很消耗时间，上线的时候放在服务器上即可
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!--ReactDOM.render()-->
+		<h2>二、ReactDOM.render()</h2>
+		<div class="render">
+			<p>ReactDOm.render()是React的最基本方法，用于将模板转化为HTML语言，并插入指定的DOM节点</p>
+
+		</div>
+		<h2>三、JSX语法</h2>
+		<div  class="jsx">
+			<p>上一节的代码，HTML直接写在js中，不加任何引号，这就是JSX的语法，它允许HTML和JS混写</p>
+			<p>先说一个方法：map()</p>
+			<ul>
+				<li class="bold">map方法在js中的运用</li>
+				<ul>
+					<li>map()返回一个由原数组中的每个元素调用一个指定方法之后返回值组成一个新的数组；</li>
+					<li>语法：[].map(function(value,index,array){}) </li>
+					<li>value 当前正在遍历的元素,index索引值,array原数组</li>
+					<li><img src="img/map1.png" alt=""></li>
+					<li><img src="img/map2.png" alt=""></li>
+				</ul>
+				<li class="bold">map方法在react中的运用</li>
+				<ul>
+					<li><img src="img/map3.png" alt=""></li>
+				</ul>
+				<li class="bold">JSX允许直接在模板中插入javascript变量，如果这个变量是一个数组，则会展开这个数组中的所有成员
+				</li>
+				<li><img src="img/JSX.png" alt=""></li>
+				<b class="color">上面的代码一定要注意ReactDOM.render是一个方法，里面相当于两个参数，不要给箭头所指的地方加分号
+				</b>
+
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
